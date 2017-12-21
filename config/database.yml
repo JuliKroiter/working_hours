@@ -1,0 +1,22 @@
+default: &default
+ adapter: postgresql
+ encoding: unicode
+ pool: 5
+
+development:
+ <<: *default
+ database: working_hours_development
+ username: postgres
+ password: postgres
+
+test:
+ <<: *default
+ database: working_hours_test
+ username: postgres
+ password: postgres
+
+production:
+  <<: *default
+  database: working_hours_production
+  username: postgres
+  password: postgres
